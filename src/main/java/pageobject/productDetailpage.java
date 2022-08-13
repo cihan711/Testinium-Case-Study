@@ -15,7 +15,7 @@ public class productDetailpage {
 	
 	
 	
-	
+	//Asus PC is coming.
 	
 	
 	By productname = By.xpath("//*[@id='product-name' and @itemprop='name']");
