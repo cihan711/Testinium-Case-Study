@@ -6,10 +6,15 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
+import org.w3c.dom.UserDataHandler;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -39,16 +44,30 @@ public class base {
 	
 	WebDriverManager.chromedriver().setup();
     driver= new ChromeDriver(chromeOptions);
-	driver.manage().window().maximize();
+    driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
 	
-	//Global değişkenler tanımladık, data.properties ile
+	
+
+	
+
+	
 	prop = new Properties();
-	FileInputStream fis = new FileInputStream("C:\\Users\\cihan\\SeleniumTekrar\\HepsiBurada\\src\\main\\java\\resources\\data.properties");
+	FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "//src//main//java//resources//data.properties");
 	prop.load(fis);
 	
+	
 	String browserName = prop.getProperty("url");
-	System.out.println(prop.getProperty("browser"));
+	driver.get(browserName);
+	driver.findElement(By.id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")).click();
+	
+	try {
+		driver.findElement(By.className("closePopupPersona")).click();
+		
+	} catch (Exception e) {
+		
+	}
+	
 	System.out.println(prop.getProperty("url"));
 
 	
@@ -68,7 +87,13 @@ public class base {
 	{
 //		IE code
 	}
-	
+
 	return driver;
 }
+	
+	
+	public  static  void teardown()
+    {
+        driver.quit();
+    }
 }
