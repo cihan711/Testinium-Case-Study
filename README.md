@@ -12,4 +12,5 @@ It is both a Web Automation and a Web Service Automation project.
 
 WEB AUTOMATION PROJECT VIDEO
 
-[Screen Recording 2022-10-08 at 23.06.45.mov.zip](https://github.com/cihan711/Testinium-Case-Study/files/9741687/Screen.Recording.2022-10-08.at.23.06.45.mov.zip)
+
+![web_automation](https://user-images.githubusercontent.com/109972906/194760473-66102279-1c0d-4bdf-b3b2-e21ea57f7936.gif)
