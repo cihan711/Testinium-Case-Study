@@ -59,14 +59,7 @@ public class base {
 	
 	String browserName = prop.getProperty("url");
 	driver.get(browserName);
-	driver.findElement(By.id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")).click();
 	
-	try {
-		driver.findElement(By.className("closePopupPersona")).click();
-		
-	} catch (Exception e) {
-		
-	}
 	
 	System.out.println(prop.getProperty("url"));
 
@@ -74,7 +67,7 @@ public class base {
 	if(browserName.equals("chrome")) {
 		
 		WebDriverManager.chromedriver().setup();
-		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\cihan\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\user_name\\chromedriver.exe");
 		
 		driver= new ChromeDriver();
 	}
