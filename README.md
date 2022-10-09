@@ -6,6 +6,7 @@ This project includes many technologies and structures;
 * Log4J
 * Maven
 * Page Object Pattern
+* REST Assured
 
 It is both a Web Automation and a Web Service Automation project.
 
