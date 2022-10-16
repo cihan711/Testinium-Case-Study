@@ -11,6 +11,19 @@ This project includes many technologies and structures;
 It is both a Web Automation and a Web Service Automation project.
 
 
+### Requirements:
+
+Java JDK Installation -> https://www.oracle.com/tr/java/technologies/javase-downloads.html
+
+Eclipse IDE -> https://www.eclipse.org/downloads/
+
+Install ChromeDriver -> https://www.npmjs.com/package/chromedriver
+
+### Sample web application:
+
+https://www.beymen.com
+
+
 WEB AUTOMATION PROJECT VIDEO
 
 
